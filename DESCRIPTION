@@ -1,9 +1,10 @@
-Package: ccme_wqi
+Package: ccmewqi
 Type: Package
 Title: CCME water quality index
 Version: 1.0
 Date: 2015-06-03
-Author: Justin Grewal
-Maintainer: justin.grewal@ocpw.ocgov.com
+Authors@R: person("Justin", "Grewal", email = "justin.grewal@ocpw.ocgov.com", role = c("aut", "cre"))
 Description: Calculates the CCME water quality index
 License: MIT
+LazyData: true
+Suggests: testthat

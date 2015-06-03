@@ -1,0 +1,18 @@
+context('Test numbers')
+
+test_that('Functions require numeric inputs', {
+  expect_error(F1('a', 1))
+  expect_error(F1(1, 'b'))
+  expect_error(F2('a', 1))
+  expect_error(F2(1, 'b'))
+  expect_error(F3('a'))
+  expect_error(nse('a', 1))
+  expect_error(nse(1, 'b'))
+  expect_error(is_exceedance('a', 1))
+  expect_error(is_exceedance(1, 'b'))
+  expect_error(excursion('a', 1))
+  expect_error(excursion(1, 'b'))
+  expect_error(wqi('a', 1, 1))
+  expect_error(wqi(1, 'b', 1))
+  expect_error(wqi(1, 1, 'c'))
+})
