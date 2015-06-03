@@ -1,0 +1,9 @@
+Package: ccme_wqi
+Type: Package
+Title: CCME water quality index
+Version: 1.0
+Date: 2015-06-03
+Author: Justin Grewal
+Maintainer: justin.grewal@ocpw.ocgov.com
+Description: Calculates the CCME water quality index
+License: MIT
