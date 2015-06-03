@@ -1,24 +1,24 @@
-\name{ccme_wqi-package}
-\alias{ccme_wqi-package}
-\alias{ccme_wqi}
+\name{ccmewqi-package}
+\alias{ccmewqi-package}
+\alias{ccmewqi}
 \docType{package}
 \title{
-\packageTitle{ccme_wqi}
+\packageTitle{ccmewqi}
 }
 \description{
-\packageDescription{ccme_wqi}
+\packageDescription{ccmewqi}
 }
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{ccme_wqi}
-\packageIndices{ccme_wqi}
+\packageDESCRIPTION{ccmewqi}
+\packageIndices{ccmewqi}
 ~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
-\packageAuthor{ccme_wqi}
+\packageAuthor{ccmewqi}
 
-Maintainer: \packageMaintainer{ccme_wqi}
+Maintainer: \packageMaintainer{ccmewqi}
 }
 \references{
 ~~ Literature or other references for background information ~~
