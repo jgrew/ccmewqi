@@ -8,3 +8,4 @@ Description: Calculates the CCME water quality index
 License: MIT
 LazyData: true
 Suggests: testthat
+Imports: data.table

@@ -14,8 +14,8 @@
 #' @seealso \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 excursion <- function(test_value, objective_one, objective_two, limit = c('<', '>', '<>')) {
   
-  !is.numeric(test_value) || stop('test_value is non-numeric')
-  !is.numeric(objective_one) || stop('objective_one is non-numeric')
+  is.numeric(test_value) || stop('test_value is non-numeric')
+  is.numeric(objective_one) || stop('objective_one is non-numeric')
   
   if(missing(objective_two)) {
     if (is_exceedance(test_value, objective_one, objective_two, limit)) {

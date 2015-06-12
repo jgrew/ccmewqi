@@ -16,8 +16,8 @@
 #' @seealso \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 is_exceedance <- function(test_value, objective_one, objective_two, limit = c('<', '>', '<>')) {
   
-  !is.numeric(test_value) || stop('test_value is non-numeric')
-  !is.numeric(objective_one) || stop('objective_one is non-numeric')
+  is.numeric(test_value) || stop('test_value is non-numeric')
+  is.numeric(objective_one) || stop('objective_one is non-numeric')
   !is.na(objective_one) || return(FALSE)
   
   if(missing(objective_two)) {
