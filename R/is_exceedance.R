@@ -20,24 +20,20 @@ is_exceedance <- function(test_value, objective_one, objective_two, limit = c('<
   is.numeric(objective_one) || stop('objective_one is non-numeric')
   !is.na(objective_one) || return(FALSE)
   
-  if(missing(objective_two)) {
-      
-    if (limit == '<') {
-      
-      if (test_value < objective_one) {return(TRUE)} else {return(FALSE)}
-    } else if (limit == '>') {
-      
-      if (test_value > objective_one) {return(TRUE)} else {return(FALSE)}
-    }
-    
-  } else {
-    
-    if (limit == '<>') {
-      objective_min <- min(objective_one, objective_two)
-      objective_max <- max(objective_one, objective_two)
-      
-      if (test_value < objective_min | test_value > objective_max) {return(TRUE)} else {return(FALSE)}
-    }
-  }
-
+  ifelse(limit=='<>',
+         ifelse(test_value < min(objective_one, objective_two) | test_value > max(objective_one, objective_two),
+                TRUE,
+                FALSE
+         ),
+         ifelse(limit=='<',
+                ifelse(test_value < objective_one,
+                       TRUE,
+                       FALSE
+                ),
+                ifelse(test_value > objective_one,
+                       TRUE,
+                       FALSE
+                )
+         )
+  )
 }
