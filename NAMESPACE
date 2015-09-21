@@ -3,6 +3,7 @@
 export(F1)
 export(F2)
 export(F3)
+export(excursion)
 export(is_exceedance)
 export(nse)
 export(wqi)

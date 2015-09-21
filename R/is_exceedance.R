@@ -4,7 +4,7 @@
 #'
 #' @param test_value
 #' @param objective_one
-#' @param objective_two optional
+#' @param objective_two
 #' @param limit
 #' 
 #' @export

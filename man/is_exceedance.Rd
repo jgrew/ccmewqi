@@ -12,7 +12,7 @@ is_exceedance(test_value, objective_one, objective_two, limit = c("<", ">",
 
 \item{objective_one}{}
 
-\item{objective_two}{optional}
+\item{objective_two}{}
 
 \item{limit}{}
 }

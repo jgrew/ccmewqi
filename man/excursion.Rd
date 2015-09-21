@@ -4,14 +4,17 @@
 \alias{excursion}
 \title{excursion function}
 \usage{
-excursion(test_value, objective_one, objective_two, limit = c("<", ">", "<>"))
+excursion(exc, test_value, objective_one, objective_two, limit = c("<", ">",
+  "<>"))
 }
 \arguments{
+\item{exc}{}
+
 \item{test_value}{}
 
 \item{objective_one}{}
 
-\item{objective_two}{optional}
+\item{objective_two}{}
 
 \item{limit}{}
 }
