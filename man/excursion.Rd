@@ -4,11 +4,10 @@
 \alias{excursion}
 \title{excursion function}
 \usage{
-excursion(exc, test_value, objective_one, objective_two, limit = c("<", ">",
-  "<>"))
+excursion(test_value, lower_limit = NA_real_, upper_limit = NA_real_)
 }
 \arguments{
-\item{limit}{}
+\item{test_value}{}
 }
 \description{
 Calculate the magnitude of objective failures.
@@ -21,4 +20,3 @@ an "excursion"
 \seealso{
 \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 }
-

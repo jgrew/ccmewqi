@@ -12,7 +12,7 @@
 #' @seealso \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 F3 <- function(nse) {
   
-  is.numeric(nse) || stop('nse is non-numeric')
-  
+  assertthat::assert_that(is.numeric(nse))
+
   nse / (0.01 * nse + 0.01)
 }

@@ -4,8 +4,8 @@
 \alias{is_exceedance}
 \title{is_exceedance function.}
 \usage{
-is_exceedance(test_value, objective_one, objective_two, limit = c("<", ">",
-  "<>"))
+is_exceedance(test_value, lower_limit = NA_real_, upper_limit = NA_real_,
+  limit = c("<", ">", "<>"))
 }
 \arguments{
 \item{limit}{}
@@ -22,4 +22,3 @@ Inputs must be numeric.
 \seealso{
 \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 }
-

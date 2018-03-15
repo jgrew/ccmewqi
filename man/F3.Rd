@@ -19,4 +19,3 @@ Inputs must be numeric.
 \seealso{
 \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
 }
-

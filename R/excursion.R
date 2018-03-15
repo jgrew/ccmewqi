@@ -8,32 +8,20 @@
 #' 
 #' @param exc
 #' @param test_value
-#' @param objective_one
-#' @param objective_two
-#' @param limit
 #' 
 #' @export
 #' 
 #' @seealso \url{http://www.ccme.ca/en/resources/canadian_environmental_quality_guidelines/calculators.html}
-excursion <- function(exc, test_value, objective_one, objective_two, limit = c('<', '>', '<>')) {
+excursion <- function(test_value, lower_limit = NA_real_, upper_limit = NA_real_) {
   
-  is.numeric(test_value) || stop('test_value is non-numeric')
-  is.numeric(objective_one) || stop('objective_one is non-numeric')
+  assertthat::assert_that(is.numeric(test_value))
+  assertthat::assert_that(is.numeric(lower_limit))
+  assertthat::assert_that(is.numeric(upper_limit))
   
-  ifelse(!is.na(exc),
-         ifelse(exc,
-                ifelse(limit=='<>',
-                       ifelse(test_value < min(objective_one, objective_two),
-                              return((min(objective_one, objective_two) / test_value) - 1),
-                              return((test_value / max(objective_one, objective_two)) - 1)
-                       ),
-                       ifelse(limit=='<',
-                              return((objective_one / test_value) - 1),
-                              return((test_value / objective_one) - 1)
-                       )
-                ),
-                0
-         ),
-         0
-  )
+  lower_exceedance <- !is.na(lower_limit) & test_value < lower_limit
+  upper_exceedance <- !is.na(upper_limit) & test_value > upper_limit
+  
+  ifelse(lower_exceedance | upper_exceedance,
+    ifelse(lower_exceedance, return((lower_limit / test_value) - 1), return((test_value / upper_limit) - 1)),
+    0)
 }
